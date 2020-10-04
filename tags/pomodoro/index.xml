@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pomodoro on </title>
+    <link>https://gaston.life/tags/pomodoro/</link>
+    <description>Recent content in pomodoro on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 11 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://gaston.life/tags/pomodoro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Todoist and Pomodoros</title>
+      <link>https://gaston.life/writings/todoist/</link>
+      <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/todoist/</guid>
+      <description>I will not explain what Todoist or The Pomodoro Technique are nor its benefits. There are already lots of articles and blog posts doing that. I will only say that if you haven&amp;rsquo;t used them, you should at least try them. (I understand that they might not work for you, but it might give you a hint on what might.) If you are already using them, then awesome!
+On this article I will focus on how to use them together since Todoist doesn&amp;rsquo;t support The Pomodoro Technique out of the box.</description>
+    </item>
+    
+  </channel>
+</rss>

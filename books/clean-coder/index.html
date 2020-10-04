@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Clean Coder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="description" content="How to be a professional! Encourages you to take responsibility and be a better professional in this young industry. The examples are great to help you figure out how to communicate better.
+" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <link rel="stylesheet" href="https://gaston.life/css/main.min.5e222a705cb5aa73a10e6da715c4376da111cdfcc311c23a9322e8edd9860506.css">
+    <meta itemprop="name" content="Clean Coder">
+<meta itemprop="description" content="How to be a professional! Encourages you to take responsibility and be a better professional in this young industry. The examples are great to help you figure out how to communicate better.
+">
+<meta itemprop="datePublished" content="2017-09-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-12-15T20:20:43-08:00" />
+<meta itemprop="wordCount" content="2455">
+
+
+
+<meta itemprop="keywords" content="programming," />
+
+    <meta property="og:title" content="Clean Coder" />
+<meta property="og:description" content="How to be a professional! Encourages you to take responsibility and be a better professional in this young industry. The examples are great to help you figure out how to communicate better.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gaston.life/books/clean-coder/" />
+<meta property="article:published_time" content="2017-09-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-12-15T20:20:43-08:00" />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Clean Coder"/>
+<meta name="twitter:description" content="How to be a professional! Encourages you to take responsibility and be a better professional in this young industry. The examples are great to help you figure out how to communicate better.
+"/>
+
+  </head>
+  <body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbar" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item is-tab " href="https://gaston.life/">Home</a>
+            <a class="navbar-item is-tab is-active" href="https://gaston.life/books/">Books</a>
+            <a class="navbar-item is-tab " href="https://gaston.life/writings/">Writings</a>
+            <a class="navbar-item is-tab " href="https://gaston.life/now/">Now</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="container section">
+      
+<article>
+  <header class="content">
+    <h1>Clean Coder</h1>
+    <p>How to be a professional! Encourages you to take responsibility and be a better professional in this young industry. The examples are great to help you figure out how to communicate better.
+</p>
+    <small>
+  My rating: 5/5
+  · Reading time: 12 min(s)
+  · Date read: September 9, 2017
+  · <a href="https://amzn.to/32ZkDll">Amazon</a>
+</small>
+
+  </header>
+  
+  <aside class="content">
+    
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#saying-no-and-yes">Saying &ldquo;no&rdquo; and &ldquo;yes&rdquo;</a></li>
+    <li><a href="#self-improvement">Self Improvement</a></li>
+    <li><a href="#programming-and-practicing">Programming and Practicing</a></li>
+    <li><a href="#acceptance-and-testing">Acceptance and Testing</a></li>
+    <li><a href="#time-management">Time Management</a></li>
+    <li><a href="#estimations">Estimations</a></li>
+    <li><a href="#pressure">Pressure</a></li>
+    <li><a href="#collaboration">Collaboration</a></li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+  <main class="content">
+    <blockquote>
+<p>Professionalism is all about taking responsibility. — Robert Martin</p>
+</blockquote>
+<p>Don&rsquo;t take pride or honor in something that you won&rsquo;t be held accountable for.</p>
+<blockquote>
+<p>Software is too complex to create without bugs. Unfortunately that doesn&rsquo;t let
+you off the hook. The human body is too complex to understand in it&rsquo;s
+entirety, but doctors still take an oath to do no harm. — Robert Martin</p>
+</blockquote>
+<p>You will create bugs, you will make errors. Learn to apologize and be
+responsible for the bugs you create. Fix them and learn from them.</p>
+<p>Increase your confidence in your code by testing it. And then test it again, and
+up, and down, and from side to side.</p>
+<p>Only write code you expect to get executed, not &ldquo;just-in-case&rdquo; code. If you
+expect your code to be executed, write a test for it. Design and write code
+that&rsquo;s easy to test.</p>
+<p>Get 100% coverage with automated tests that you can run whenever you want
+wherever you want. It&rsquo;s not a suggestion, it&rsquo;s a requirement. It will not catch
+everything but less coverage can catch less errors, never more.</p>
+<p>If you don&rsquo;t get 100% coverage or when automated tests are not enough, your
+automated test suite must tell you, at the very least, if your system is
+<em>likely</em> to pass QA tests.</p>
+<p>To your knowledge, QA should find <strong>nothing</strong>. Don&rsquo;t rely on QA to do the
+testing for you. Whenever a bug passed through you, figure out why and do
+something to prevent it from happening again.</p>
+<p>Never compromise the structure of your code. The structure of your code allows
+you to be flexible in the future. Compromising it is compromising your future.</p>
+<blockquote>
+<p>This is completely counter to the way most people think about software. They
+think that making a continuous series of changes to working software is
+dangerous. No! What is dangerous is allowing the software to remain static. If
+you aren&rsquo;t flexing it, then when you do need to change it, you’ll find it
+rigid. — Robert Martin</p>
+</blockquote>
+<p>Always make changes to your code. Make sure that whenever you find that a change
+is hard to make, refine your design so that the next change will be easier.</p>
+<h2 id="saying-no-and-yes">Saying &ldquo;no&rdquo; and &ldquo;yes&rdquo;</h2>
+<p>Learn how to say &ldquo;no&rdquo; to your managers. Professionals are expected to say &ldquo;no&rdquo;,
+to aggressively defend your point of view just as managers defends them. Finding
+the best outcome usually takes negotiation between manager and engineer.</p>
+<p>Negotiation involves clearly identifying what everyone wants, being able to do
+deliver in the given time, removing less wanted or less valuable features and
+focusing only on the most important parts, if needed.</p>
+<p>Negotiation cares more about facts rather than whys. Why something will take
+more time is a lot less important than the fact that it will take more time. Too
+many details encourages micromanagement.</p>
+<p>Learn how to say &ldquo;no&rdquo; specially when the stakes are high. A team player is not
+someone who says &ldquo;yes&rdquo; all the time, but someone who works for the best outcome,
+helping others as needed.</p>
+<p>Never say that you&rsquo;ll try harder. It assumes that you&rsquo;re not already working the
+best you can. If you say you&rsquo;ll try, most people will interpret it as a
+commitment.</p>
+<p>Learn to recognize the different ways people asks you to try harder:</p>
+<ul>
+<li>&ldquo;Can you work smarter and get creative?&rdquo; &ldquo;We&rsquo;re all pretty creative, we&rsquo;re not
+holding back.&rdquo;</li>
+<li>&ldquo;Can you work overtime?&rdquo; &ldquo;That will just make us go slower with overly tired
+engineers.&rdquo;</li>
+<li>&ldquo;I know you&rsquo;ll figure something out.&rdquo; &ldquo;No, we won&rsquo;t, we have to scope down the
+project.&rdquo;</li>
+</ul>
+<blockquote>
+<p>If you are not holding back some energy in reserve, if you don&rsquo;t have a new
+plan, if you aren&rsquo;t going to change your behavior, and if you are reasonably
+confident in your original estimate, then promising to try is fundamentally
+dishonest. You are lying. — Robert Martin</p>
+</blockquote>
+<p>Know how much overtime you can effectively apply, where the limit is, and what
+it will cost. This is a negotiation tool that you can apply if the situation
+requires it.</p>
+<p>The only way to truly say &ldquo;yes&rdquo; is if you&rsquo;re unafraid to say &ldquo;no&rdquo;.</p>
+<p>Never leave your professionalism aside to solve a problem quickly. Not being
+professional is the way you create problems.</p>
+<p>Learn to identify non-commitments. A non-commitment usually use ambiguous words
+such as: need/should, hope/wish, let&rsquo;s.</p>
+<p>Learn to identify a commitment. It&rsquo;s composed of three parts: saying you&rsquo;ll do
+it, meaning it, and then actually doing it. They state a fact or action about
+what you—not anyone else or something else—will do in the future.</p>
+<p>Only commit to things you have full control. If it can&rsquo;t be done, commit to the
+actions you will do to get you closer.</p>
+<p>Raise a flag as soon as you find out you won&rsquo;t be able to make a commitment. If
+you don&rsquo;t let anyone know, you&rsquo;re not giving anyone a chance to help you follow
+through your commitment.</p>
+<h2 id="self-improvement">Self Improvement</h2>
+<blockquote>
+<p>Professionals spend time caring for their profession. — Robert Martin</p>
+</blockquote>
+<p>Be responsible for your career by staying up to date and improving your skills.
+It&rsquo;s not your employer&rsquo;s responsibility, it&rsquo;s yours.</p>
+<p>Study and understand the domain of the solutions you&rsquo;re solving. You should be
+able to recognize and challenge specification errors.</p>
+<p>Plan on working 60 hours a week: 40 hours for your employer and 20 hours for
+you.</p>
+<p>The minimum things you must know are:</p>
+<ul>
+<li>Design patterns: GOF and POSA books.</li>
+<li>Design principles: SOLID and component principles.</li>
+<li>Methods: XP, Scrum, Lean, Kanban, Waterfall, Structured Analysis, and
+Structured Design.</li>
+<li>Disciplines: TDD, OOD, Structured Programming, CI/CD, and Pair Programming</li>
+<li>Artifacts: UML, DFDs, Structure Charts, Petri Nets, State Transition Diagrams
+and Tables, Flow Charts, and Decision Tables.</li>
+</ul>
+<p>Learn things outside of your comfort zone. Learn Prolog and Forth.</p>
+<p>Do a simple 10-minute programming exercise in the morning, to warm up, and in the
+afternoon, to cool down.</p>
+<p>Mentor junior engineers. Don&rsquo;t let them flail about unsupervised.</p>
+<p>Be humble. Fight off the act of supreme arrogance that comes with
+programming—creating something out of nothing, building solutions to problems,
+bringing order into chaos.</p>
+<p>Never ridicule others, but accept ridicule when it&rsquo;s deserved and laugh it off
+when it&rsquo;s not. Never demean others for making a mistake, you can be the next.</p>
+<p>Take care of your sleep, health, life, and lifestyle. Professionalism is more
+about consistency and good 8 hours of work rather than simply working more time.</p>
+<h2 id="programming-and-practicing">Programming and Practicing</h2>
+<blockquote>
+<p>Coding is an intellectually challenging and exhausting activity. — Robert
+Martin</p>
+</blockquote>
+<p>Don&rsquo;t code if you&rsquo;re tired or distracted. Rest or eliminate the distractions.</p>
+<p>If you&rsquo;re worried or anxious about something, time-block it. Dedicate maybe one
+hour to solve the issue. Even if it&rsquo;s not solved, you&rsquo;ll probably have reduced
+how much it distracts you.</p>
+<p>Be careful about programming while in the Zone. Even though working in the Zone
+makes you feel you&rsquo;re going fast, you&rsquo;ll probably lose the big picture and will
+end up rewriting things.</p>
+<p>Conserve your energy and creativity. When you&rsquo;re tired, rest for a while. If
+you&rsquo;re blocked and the solution doesn&rsquo;t come to you, find a pair partner.</p>
+<blockquote>
+<p>Software development is a marathon, not a sprint. — Robert Martin</p>
+</blockquote>
+<p>TDD works. Get over it.</p>
+<ul>
+<li>Write a test before any line of production code.</li>
+<li>Write one and only one failing test, not compiling counts as failing.</li>
+<li>Write the minimum production code that passes the test.</li>
+</ul>
+<p>Your tests are documentation. It&rsquo;s the lowest-level design of the system.</p>
+<p>Don&rsquo;t fear cleaning up. Professionalism leads to steadily improving codebases
+instead of letting them rot.</p>
+<blockquote>
+<p>TDD is the professional option. It is a discipline that enhances certainty,
+courage, defect reduction, documentation, and design. — Robert Martin</p>
+</blockquote>
+<p>Don&rsquo;t follow a guideline if the guideline does more harm than good.</p>
+<blockquote>
+<p>When performance matters, professionals practice. — Robert Martin</p>
+</blockquote>
+<p>Do programming katas. They are choreographed keystrokes and mouse movements that
+simulates solving a problem. You should already know the answer.</p>
+<p>Practice programming katas to train your brain and fingers how to move and
+react. Practice until you know several different katas.</p>
+<p>Solve a programming kata with a partner. One programmer writes a unit test, and
+then the other must make is pass. Then reverse the roles.</p>
+<blockquote>
+<p>Practicing is what you do when you aren&rsquo;t getting paid. You do it so that you
+will be paid, and paid well. — Robert Martin</p>
+</blockquote>
+<h2 id="acceptance-and-testing">Acceptance and Testing</h2>
+<p>Always make sure your communication with other members of the team, and the
+business, are accurate and healthy.</p>
+<p>Consider that customers are not completely sure of what they&rsquo;re asking. As soon
+as they see something working, they get a better idea of what they want and they
+will change the requirements. This is not only common but expected.</p>
+<p>Clear requirements doesn&rsquo;t necessarily mean precise. The same is true about
+estimations. There are intrinsic uncertainties.</p>
+<p>Work on making the requirements precise only when you&rsquo;re about to start
+developing it.</p>
+<p>Shipping without tests to ship on time, to save face, is irresponsible. It&rsquo;s not
+thinking on your customer or employer who expects a professional.</p>
+<p>There is only one definition of &ldquo;done&rdquo;: all code is written, all tests pass, and
+QA and the stakeholders have accepted it.</p>
+<blockquote>
+<p>Acceptance tests are tests written by a collaboration of the stakeholders and
+the programmers in order to define when a requirement is done. — Robert Martin</p>
+</blockquote>
+<p>It&rsquo;s your responsibility to drive the requirements all the way to automated
+acceptance tests. This is work, but it&rsquo;s not more work than defining a manual
+test plan and definitely less work than repeatedly executing it.</p>
+<p>Automated acceptance tests will prevent you from implementing the wrong system
+and will allow you to know when you&rsquo;re done.</p>
+<p>Just as with requirements, write the acceptance tests only when you&rsquo;re about to
+start developing the requirement.</p>
+<p>The role of QA is to work with the business to define the expected behavior of
+corner and error cases and to do exploratory testing to characterize the true
+behavior of a system.</p>
+<p>Test automation pyramid:</p>
+<ul>
+<li>Unit tests: By programmers for programmers. Should cover ~100% of the code.</li>
+<li>Component tests: By QA and business with assistance from development.
+Because components encapsulate business rules, these includes acceptance
+tests. Should cover ~50% of the code.</li>
+<li>Integration tests: By systems architects, or lead designers, of the system.
+Only useful for large systems with many components. Tests how the assembly of
+components works together, not the business rules. Can be skipped from CI
+because they usually take more time to run, but they have to be executed
+periodically. Should cover ~20% of the code.</li>
+<li>System tests: Tests against the entire system to make sure everything is wired
+correctly. Usually written at the UI level. Performance tests are usually in
+this category. Should cover ~10% of the code.</li>
+<li>Manual exploratory tests: Not automated nor scripted tests. These tests
+explores the system for unexpected, or inconsistent, behavior while confirming
+expected behaviors. Not focused on coverage but on how the system behaves with
+a human.</li>
+</ul>
+<h2 id="time-management">Time Management</h2>
+<blockquote>
+<p>Professionals evaluate the priority of each task, disregarding their personal
+fears and desires, and execute those tasks in priority order. — Robert Martin</p>
+</blockquote>
+<p>You are responsible of knowing what to do and how to make effective use of the
+eight hours you work per day.</p>
+<p>Meetings are both necessary and time wasters. The person inviting you to a
+meeting isn&rsquo;t responsible of managing your time.</p>
+<p>Don&rsquo;t attend to meetings without an immediate and significant benefit to the job
+you&rsquo;re doing right now.</p>
+<p>When invited to contribute to a meeting, decide if the loss to your project is
+worth the benefit to theirs.</p>
+<p>If you lose interest in a meeting, leave. Ask, at the opportune moment, if your
+presence is still necessary.</p>
+<p>For every meeting ask about the discussions that will take place, the agenda,
+the time allotted, and the goal to be achieved.</p>
+<p>If an argument isn&rsquo;t solved in five minutes, make a note to follow up on it once
+the appropriate data is in place and follow up. Willpower doesn&rsquo;t win arguments,
+data does.</p>
+<p>Avoid getting vested in an idea to the point that you can&rsquo;t abandon it.</p>
+<p>Don&rsquo;t suggest or agree on working on two projects at the same time. There&rsquo;s no
+such thing as &ldquo;half a person&rdquo;.</p>
+<h2 id="estimations">Estimations</h2>
+<p>Realize that the business views estimates as commitments while developers view
+estimates as guesses.</p>
+<p>Don&rsquo;t make commitments unless you know you can achieve it. Don&rsquo;t even imply
+you&rsquo;re committing to something you don&rsquo;t know if you can do.</p>
+<p>Make estimates. If needed, communicate the probability distribution of the
+estimate.</p>
+<p>If you are going to commit, provide hard numbers. If not, provide probabilistic
+estimates.</p>
+<p>Trivariate analysis:</p>
+<ul>
+<li>\(O\): Wildly optimistic estimate. Less than 1% of occurrence.</li>
+<li>\(N\): Nominal estimate. Greatest chance of success.</li>
+<li>\(P\): Wildly pessimistic estimate. Less than 1% of occurrence.</li>
+</ul>
+<p>With these three values, the expected duration of the task is:</p>
+<p>$$\mu = \frac{O + 4N + P}{6}$$</p>
+<p>The standard deviation of the probability distribution is:</p>
+<p>$$\sigma = \frac{P-O}{6}$$</p>
+<p>The estimated duration of a sequence of tasks is:</p>
+<p>$$\mu_{sequence} = \sum \mu_{task}$$</p>
+<p>And the standard deviation of the probability distribution of a sequence of
+tasks is:</p>
+<p>$$\sigma_{sequence} = \sqrt{\sum \sigma_{task}^2}$$</p>
+<h2 id="pressure">Pressure</h2>
+<p>Always stay calm under pressure.</p>
+<p>Avoid scenarios that cause pressure. Avoid committing to deadlines that you&rsquo;re
+not sure you can meet. It&rsquo;s fine to try to help the business when commitments
+are imposed, but you don&rsquo;t have to accept them.</p>
+<p>Resist the temptation to create a mess only to try to go quickly. That never
+works in the long run.</p>
+<p>Choose behaviors that you would follow during a crisis. Realize that your
+behavior during a crisis is what you truly believe on. Follow your decisions all
+the time.</p>
+<p>Working more hours is not sustainable. Slow down, think the problem through,
+plot a course of action, and follow it at a reasonable and steady pace.</p>
+<p>When the pressure is on, find someone who&rsquo;s willing to pair program with you. If
+you see someone under pressure, offer to pair program with them.</p>
+<h2 id="collaboration">Collaboration</h2>
+<p>Your first responsibility is to your employer. Understand why you&rsquo;re writing the
+code you&rsquo;re writing and how your employer will benefit from it.</p>
+<p>Share what you learn. Document what you do.</p>
+<p>You may work better alone, but the team doesn&rsquo;t benefit from you working alone.
+Face each other, hear their frustrations, smell their fear, and offer help. Work
+as a unit.</p>
+<p>Teams are harder to build than projects. Suggest to keep sub-teams working
+together from project to project.</p>
+<p>Be a craftsman:</p>
+<ul>
+<li>Work quickly but without rushing.</li>
+<li>Provide reasonable estimates and meet your commitments.</li>
+<li>Know when to say &ldquo;no&rdquo; and when to say &ldquo;yes&rdquo;.</li>
+<li>Be a professional.</li>
+</ul>
+<p>It&rsquo;s your responsibility to teach and mentor young engineers. Nobody out of
+college is prepared enough for the industry. Teach consistency, practice, and
+the skills of being a craftsman.</p>
+
+  </main>
+  <footer class="content">
+    
+    
+    <h1>See Also</h1>
+    <ul>
+      
+      <li><a href="/books/effective-java/">Effective Java</a></li>
+      
+      <li><a href="/books/effective-programming/">Effective Programming</a></li>
+      
+      <li><a href="/books/dont-make-me-think/">Don&#39;t Make Me Think</a></li>
+      
+      <li><a href="/books/growing-object-oriented-software-guided-by-tests/">Growing Object Oriented Software, Guided by Tests</a></li>
+      
+    </ul>
+    
+    <p><small>Last updated on December 15, 2019.</small></p>
+  </footer>
+</article>
+
+    </section>
+    
+    <script src="https://gaston.life/js/main.min.384c35de8a53c9a958f15661fe17b4bc657a15d887562ee0b6f56a3b10d91448.js" type = "text/javascript"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </body>
+</html>

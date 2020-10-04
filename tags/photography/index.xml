@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>photography on </title>
+    <link>https://gaston.life/tags/photography/</link>
+    <description>Recent content in photography on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 14 Sep 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://gaston.life/tags/photography/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Effective Photo Management</title>
+      <link>https://gaston.life/writings/photos/</link>
+      <pubDate>Mon, 14 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/photos/</guid>
+      <description>What I like about photographs is that they capture a moment that&amp;rsquo;s gone forever, impossible to reproduce. — Karl Lagerfeld
+ Taking photos helps us remember those moments that are gone forever; our time spent with friends and family, our trips abroad, our life. They help us remember places we&amp;rsquo;re not going to visit again, experiences we&amp;rsquo;re not going to live again, and those who we&amp;rsquo;ll never be able to talk to again.</description>
+    </item>
+    
+  </channel>
+</rss>

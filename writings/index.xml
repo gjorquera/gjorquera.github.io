@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writings on </title>
+    <link>https://gaston.life/writings/</link>
+    <description>Recent content in Writings on </description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://gaston.life/writings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo: From Zero to One</title>
+      <link>https://gaston.life/writings/hugo/</link>
+      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/hugo/</guid>
+      <description>What is Hugo? Hugo is a CLI tool to build and maintain static HTML sites from source code. With Hugo you define the structure and style of the site once so that you can focus on the content. After you have an initial structure, style, and content, Hugo will be able to automatically include partials and layouts into pages, generate sitemaps, and build lists based completely on the content you write.</description>
+    </item>
+    
+    <item>
+      <title>Site Style</title>
+      <link>https://gaston.life/writings/site-style/</link>
+      <pubDate>Wed, 11 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/site-style/</guid>
+      <description>Headings The following HTML &amp;lt;h1&amp;gt;—&amp;lt;h6&amp;gt; elements represent six levels of section headings. &amp;lt;h1&amp;gt; is the highest section level while &amp;lt;h6&amp;gt; is the lowest.
+H1 H2 H3 H4 H5 H6 Paragraph Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur?</description>
+    </item>
+    
+    <item>
+      <title>Boredom is a Good Thing</title>
+      <link>https://gaston.life/writings/boredom/</link>
+      <pubDate>Fri, 27 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/boredom/</guid>
+      <description>Do you remember a decade or two ago when you were bored? Do you remember how it felt? Not knowing what to do? Bouncing out ideas with your friends (or imaginary friends)?
+Did you stop to think about how I asked &amp;ldquo;a decade or two ago&amp;rdquo; and not &amp;ldquo;a week or two ago&amp;rdquo; or even &amp;ldquo;a year or two ago&amp;rdquo;?
+When was the last time you were bored?
+It&amp;rsquo;s hard to feel bored with the constant notifications and noise around us due to technology.</description>
+    </item>
+    
+    <item>
+      <title>Getting Clean from Notifications</title>
+      <link>https://gaston.life/writings/notifications/</link>
+      <pubDate>Mon, 19 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/notifications/</guid>
+      <description>I bought my first smartphone because I wanted to have my calendar accessible from my computer and phone. I kept forgetting my appointments and scheduling several things at the same time. Sounds reasonable, right?
+Fast forward a couple of years and I found myself compulsively checking my phone. At first I was just trying to take advantage of idle moments while commuting or when waiting for something. By the end, I was checking my phone before even getting out of bed, while having dinner (and watching TV), while trying to work, even while having a good time with some friends.</description>
+    </item>
+    
+    <item>
+      <title>Learning from Books</title>
+      <link>https://gaston.life/writings/notes/</link>
+      <pubDate>Fri, 02 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/notes/</guid>
+      <description>I bet you can recommend me several books that have changed your life in some way. But, can you honestly say that you have internalized the teachings of every one of them? Maybe you can&amp;rsquo;t, but can you at least summarize them? If not, can you even tell me the key topics?
+Are you satisfied with what you remember from those essential and life changing books? If you&amp;rsquo;re not, then this might help you.</description>
+    </item>
+    
+    <item>
+      <title>Effective Photo Management</title>
+      <link>https://gaston.life/writings/photos/</link>
+      <pubDate>Mon, 14 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/photos/</guid>
+      <description>What I like about photographs is that they capture a moment that&amp;rsquo;s gone forever, impossible to reproduce. — Karl Lagerfeld
+ Taking photos helps us remember those moments that are gone forever; our time spent with friends and family, our trips abroad, our life. They help us remember places we&amp;rsquo;re not going to visit again, experiences we&amp;rsquo;re not going to live again, and those who we&amp;rsquo;ll never be able to talk to again.</description>
+    </item>
+    
+    <item>
+      <title>Resting into Productivity</title>
+      <link>https://gaston.life/writings/resting/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/resting/</guid>
+      <description>We all like to learn and be good at what we do. Right?
+But, have you ever found yourself trying to be productive by making the most of idle moments? Answering emails at waiting rooms, listening to audiobooks while driving, or reading books cover to cover to learn new things?
+Are you convinced that to be more productive you have to work more hours and reducing your not working moments?</description>
+    </item>
+    
+    <item>
+      <title>Todoist and Pomodoros</title>
+      <link>https://gaston.life/writings/todoist/</link>
+      <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/todoist/</guid>
+      <description>I will not explain what Todoist or The Pomodoro Technique are nor its benefits. There are already lots of articles and blog posts doing that. I will only say that if you haven&amp;rsquo;t used them, you should at least try them. (I understand that they might not work for you, but it might give you a hint on what might.) If you are already using them, then awesome!
+On this article I will focus on how to use them together since Todoist doesn&amp;rsquo;t support The Pomodoro Technique out of the box.</description>
+    </item>
+    
+  </channel>
+</rss>

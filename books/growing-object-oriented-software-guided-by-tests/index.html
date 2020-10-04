@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Growing Object Oriented Software, Guided by Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="description" content="Using a simple language, clear ideas, and concrete examples, it builds a wealth of knowledge. It&#39;s very deep, touching hard topics of software maintainability, with real life examples. It&#39;ll get you to the next level.
+" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <link rel="stylesheet" href="https://gaston.life/css/main.min.5e222a705cb5aa73a10e6da715c4376da111cdfcc311c23a9322e8edd9860506.css">
+    <meta itemprop="name" content="Growing Object Oriented Software, Guided by Tests">
+<meta itemprop="description" content="Using a simple language, clear ideas, and concrete examples, it builds a wealth of knowledge. It&#39;s very deep, touching hard topics of software maintainability, with real life examples. It&#39;ll get you to the next level.
+">
+<meta itemprop="datePublished" content="2016-08-30T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-03-19T21:26:08-07:00" />
+<meta itemprop="wordCount" content="1340">
+
+
+
+<meta itemprop="keywords" content="programming," />
+
+    <meta property="og:title" content="Growing Object Oriented Software, Guided by Tests" />
+<meta property="og:description" content="Using a simple language, clear ideas, and concrete examples, it builds a wealth of knowledge. It&#39;s very deep, touching hard topics of software maintainability, with real life examples. It&#39;ll get you to the next level.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gaston.life/books/growing-object-oriented-software-guided-by-tests/" />
+<meta property="article:published_time" content="2016-08-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-19T21:26:08-07:00" />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Growing Object Oriented Software, Guided by Tests"/>
+<meta name="twitter:description" content="Using a simple language, clear ideas, and concrete examples, it builds a wealth of knowledge. It&#39;s very deep, touching hard topics of software maintainability, with real life examples. It&#39;ll get you to the next level.
+"/>
+
+  </head>
+  <body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbar" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item is-tab " href="https://gaston.life/">Home</a>
+            <a class="navbar-item is-tab is-active" href="https://gaston.life/books/">Books</a>
+            <a class="navbar-item is-tab " href="https://gaston.life/writings/">Writings</a>
+            <a class="navbar-item is-tab " href="https://gaston.life/now/">Now</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="container section">
+      
+<article>
+  <header class="content">
+    <h1>Growing Object Oriented Software, Guided by Tests</h1>
+    <p>Using a simple language, clear ideas, and concrete examples, it builds a wealth of knowledge. It&#39;s very deep, touching hard topics of software maintainability, with real life examples. It&#39;ll get you to the next level.
+</p>
+    <small>
+  My rating: 5/5
+  · Reading time: 7 min(s)
+  · Date read: August 30, 2016
+  · <a href="https://amzn.to/2Nmb617">Amazon</a>
+</small>
+
+  </header>
+  
+  <aside class="content">
+    
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#object-oriented-design">Object Oriented Design</a></li>
+    <li><a href="#domain-concepts">Domain Concepts</a></li>
+    <li><a href="#value-objects">Value Objects</a></li>
+    <li><a href="#automatic-tests">Automatic Tests</a></li>
+    <li><a href="#test-driven-development">Test Driven Development</a></li>
+    <li><a href="#commonly-missed-features-and-dependencies">Commonly Missed Features and Dependencies</a></li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+  <main class="content">
+    <p>Unless performance is a requirement, optimize for readability. Code is read far
+more than it&rsquo;s written.</p>
+<p>Team productivity is mostly improved by a readable codebase.</p>
+<p>External quality measures the level on which the system meets its customers and
+users needs. Internal quality measures the level on which the system meets its
+developers and administrator needs.</p>
+<p>When developing always consider the external quality trade-offs as well as
+internal quality trade-offs. Never forget about the internal quality.</p>
+<blockquote>
+<p>Code isn&rsquo;t sacred just because it exists. — Steve Freeman and Nat Pryce</p>
+</blockquote>
+<p>The best way to cope with system complexity is to constantly improve the
+internal quality.</p>
+<p>Code that works is not the same as finished code. Always consider that the first
+version might have everything in place, but it won&rsquo;t express the intentions
+clearly.</p>
+<blockquote>
+<p>We cannot emphasize strongly enough that “first-cut” code is not
+finished. — Steve Freeman and Nat Pryce</p>
+</blockquote>
+<p>Code that just works might be an initial success, but it won&rsquo;t withstand the
+pass of time.</p>
+<p>Alternate between adding code and reflecting upon the resulting code.</p>
+<p>Refactoring is improving code without changing functionality. Wait until you&rsquo;ve
+sorted out the functionality before refactoring.</p>
+<p>If a name isn&rsquo;t right, change it. You&rsquo;ll be helping others (and your future
+self) avoid confusion.</p>
+<h2 id="object-oriented-design">Object Oriented Design</h2>
+<p>Objects depends on other objects. These relationships can be loosely categorized
+into:</p>
+<ul>
+<li>Dependencies: Objects needed to fulfill its responsibilities. Must be passed
+explicitly upon construction.</li>
+<li>Notifications: Objects notified while performing different actions. Can be
+added or removed throughout its lifecycle.</li>
+<li>Adjustments: Objects used to adjust its behavior. Needed upon construction but
+can start with default implementations and changed later on.</li>
+</ul>
+<p>Focus on the communication between objects rather than on the objects
+themselves. This approach create objects defined in terms of the domain, instead
+of the implementations.</p>
+<p>Object can work only with its local variables or those passed explicitly. It
+makes them independent of the context, are easier to reuse, and move around.</p>
+<p>Make explicit and name interactions between objects and collaborators.</p>
+<p>“Tell, Don&rsquo;t Ask” helps to name interactions hidden between chains of getters.</p>
+<blockquote>
+<p>If it&rsquo;s explicit, we can name it. — Steve Freeman and Nat Pryce</p>
+</blockquote>
+<p>Strive for easy to understand unit tests and listen to them. It helps to design
+objects with explicit dependencies that can be substituted, and clear
+responsibilities that can be verified.</p>
+<p>Functionality that&rsquo;s difficult to test will also be difficult to maintain in the
+future.</p>
+<p>Use the tests to discover supporting roles and collaborators that the objects
+needs. They can be mocked or faked on tests. Real implementations can be written
+afterwards on its own TDD process.</p>
+<p>It&rsquo;s difficult to predict which parts of the system will need to change in the
+future. Gather together code that will change for the same reason.</p>
+<p>Design objects whose responsibilities can be described without any conjunctions.</p>
+<p>Objects should exhibit a simpler behavior than all of its components grouped
+together.</p>
+<h2 id="domain-concepts">Domain Concepts</h2>
+<p>Work hard to extract domain concepts via value objects or communication
+relationships. Even if they don&rsquo;t do much.</p>
+<p>These are some techniques to extract domain concepts from existing code:</p>
+<ul>
+<li>Breaking out: When you find that an object is becoming too complex.</li>
+<li>Budding off: When you make explicit a new domain concept in the code.</li>
+<li>Bundling up: When you notice that a group of values are always used together.</li>
+</ul>
+<p>Beware of strings, they are perfect to hide domain concepts. Prefer creating
+objects to represent domain concepts even if they are trivial.</p>
+<p>Trying to test exact matches on strings might indicate a missing domain concept.</p>
+<h2 id="value-objects">Value Objects</h2>
+<p>Think hard on when an object is actually a value object.</p>
+<p>It may be a value object if its values are immutable.</p>
+<p>Creating an interface just to have interfaces, is duplication. If you can&rsquo;t find
+a good name for the interface, you may have a value object and don&rsquo;t need the
+interface.</p>
+<h2 id="automatic-tests">Automatic Tests</h2>
+<p>Pay attention to code in tests as you do to production code. The styles will
+differ, though.</p>
+<p>Refactor test code, but not to the point that they get too abstract to stop
+understanding what they do. Tests should include the values being tested, even
+if there&rsquo;s some duplication.</p>
+<p>Make the intention of every test as clear as possible. Differentiate the tested
+code, with supporting infrastructure and object structure.</p>
+<p>Use tests to clarify the ideas behind your code. Use them as examples on how to
+use your code.</p>
+<p>The book defines the following types of tests:</p>
+<ul>
+<li>Acceptance tests: Tests from the outside to check the system as a whole. Tests
+whether the system does what it&rsquo;s supposed to do. They can only use
+terminology from the application&rsquo;s domain.</li>
+<li>Integration tests: Tests against code that we can&rsquo;t change. Helps to increase
+your understanding of third party APIs.</li>
+<li>Unit tests: Tests to see if individual objects does the right thing and are
+convenient to work with. Unit test behaviors, not methods.</li>
+</ul>
+<p>Limit test scopes to keep them understandable.</p>
+<p>Test names are the first hint on what the test do. Name it in terms of what the
+object does, not what it is. The name can include the expected result, action
+and context.</p>
+<p>Use imperative mood for the name of methods that trigger events, and indicative
+mood for the name of methods that asserts functionality.</p>
+<p>Keep the team&rsquo;s performance up by keeping high quality tests. High quality tests
+are better achieved with a high internal quality codebase.</p>
+<p>Striving for readable, descriptive and expressive tests gives feedback about the
+internal quality of the codebase. Make it read like a declarative description.</p>
+<p>Forget about one assertion per test, or one method per test. It&rsquo;s better to test
+one behavior per test, which might include a handful of methods and assertions.</p>
+<p>Don&rsquo;t think you&rsquo;ll be able to test all configuration combinations and paths.
+Professional testers exists for a reason. Never stop working towards better and
+better tests.</p>
+<p>Consider creating builders before mocking complicated value objects or objects
+under test. It reduces duplication and makes it more declarative.</p>
+<h2 id="test-driven-development">Test Driven Development</h2>
+<p>The general approach is to start with an outside event that triggers a behavior,
+and work downwards one object at a time.</p>
+<p>Start a new project by writing an acceptance test of a “walking skeleton”. Just
+enough code to work out how to build and deploy your project. It may take a
+surprising amount of effort, but better now than later.</p>
+<p>Make as few decisions as possible. Just enough to start the TDD process.</p>
+<p>Start a new feature with an acceptance test. It helps to know for certain when
+you are done.</p>
+<p>While writing new tests, ignore the fact that it won&rsquo;t run. Just concentrate on
+the text, tested functionality, and how it looks.</p>
+<p>When the test reads well, write the needed test infrastructure to make it fail
+due to missing functionality.</p>
+<p>If the test fails in a way you didn&rsquo;t expect, fix that. It means that you
+misunderstood something.</p>
+<p>Having the “right” failure is very helpful for future diagnostics.</p>
+<blockquote>
+<p>The point of a test is not to pass but to fail. — Steve Freeman and Nat Pryce</p>
+</blockquote>
+<p>Prefer starting with a simple successful case. It helps to define the structure
+of the functionality and keep motivation up. Then decide if you prefer to
+continue with successful cases or start with error handling.</p>
+<p>Learn how to slice up functionality for the incremental development process. It
+should be significant enough to tell when it&rsquo;s done, but small enough to be able
+to finish it quickly.</p>
+<p>The design can be sorted out while doing the development. You just have to keep
+a flexible attitude towards new design ideas due to new understanding of the
+features.</p>
+<p>After finishing a new feature, try to clean it up now that it&rsquo;s fresh.</p>
+<h2 id="commonly-missed-features-and-dependencies">Commonly Missed Features and Dependencies</h2>
+<p>Support logging (errors and info) is a feature and part of the user interface.
+Its requirements should be driven by those that depend on it, and it should be
+tested.</p>
+<p>Time is an implicit dependency. Isolate the concept of time and make its
+dependency explicit to those objects that depends on time.</p>
+
+  </main>
+  <footer class="content">
+    
+    
+    <h1>See Also</h1>
+    <ul>
+      
+      <li><a href="/books/clean-coder/">Clean Coder</a></li>
+      
+      <li><a href="/books/effective-java/">Effective Java</a></li>
+      
+      <li><a href="/books/effective-programming/">Effective Programming</a></li>
+      
+      <li><a href="/books/dont-make-me-think/">Don&#39;t Make Me Think</a></li>
+      
+    </ul>
+    
+    <p><small>Last updated on March 19, 2020.</small></p>
+  </footer>
+</article>
+
+    </section>
+    
+    <script src="https://gaston.life/js/main.min.384c35de8a53c9a958f15661fe17b4bc657a15d887562ee0b6f56a3b10d91448.js" type = "text/javascript"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reading on </title>
+    <link>https://gaston.life/tags/reading/</link>
+    <description>Recent content in reading on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 02 Oct 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://gaston.life/tags/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning from Books</title>
+      <link>https://gaston.life/writings/notes/</link>
+      <pubDate>Fri, 02 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/notes/</guid>
+      <description>I bet you can recommend me several books that have changed your life in some way. But, can you honestly say that you have internalized the teachings of every one of them? Maybe you can&amp;rsquo;t, but can you at least summarize them? If not, can you even tell me the key topics?
+Are you satisfied with what you remember from those essential and life changing books? If you&amp;rsquo;re not, then this might help you.</description>
+    </item>
+    
+  </channel>
+</rss>

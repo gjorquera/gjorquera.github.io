@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>learning on </title>
+    <link>https://gaston.life/tags/learning/</link>
+    <description>Recent content in learning on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 10 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://gaston.life/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Make it Stick</title>
+      <link>https://gaston.life/books/make-it-stick/</link>
+      <pubDate>Wed, 10 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/books/make-it-stick/</guid>
+      <description>Learning: we mean acquiring knowledge and skills and having them readily available from memory so you can make sense of future problems and opportunities. — Peter Brown
+ Learning is a skill. Develop it, as it&amp;rsquo;ll be your most valuable skill.
+Learning is hard and it usually isn&amp;rsquo;t enjoyable. It depends more on the kind of effort spent while learning than on genetics. Be patient and determined.
+In practice, there&amp;rsquo;s no limit to what we can remember.</description>
+    </item>
+    
+    <item>
+      <title>Learning from Books</title>
+      <link>https://gaston.life/writings/notes/</link>
+      <pubDate>Fri, 02 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/notes/</guid>
+      <description>I bet you can recommend me several books that have changed your life in some way. But, can you honestly say that you have internalized the teachings of every one of them? Maybe you can&amp;rsquo;t, but can you at least summarize them? If not, can you even tell me the key topics?
+Are you satisfied with what you remember from those essential and life changing books? If you&amp;rsquo;re not, then this might help you.</description>
+    </item>
+    
+  </channel>
+</rss>

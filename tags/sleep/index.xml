@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sleep on </title>
+    <link>https://gaston.life/tags/sleep/</link>
+    <description>Recent content in sleep on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 28 Jan 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://gaston.life/tags/sleep/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resting into Productivity</title>
+      <link>https://gaston.life/writings/resting/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/resting/</guid>
+      <description>We all like to learn and be good at what we do. Right?
+But, have you ever found yourself trying to be productive by making the most of idle moments? Answering emails at waiting rooms, listening to audiobooks while driving, or reading books cover to cover to learn new things?
+Are you convinced that to be more productive you have to work more hours and reducing your not working moments?</description>
+    </item>
+    
+  </channel>
+</rss>

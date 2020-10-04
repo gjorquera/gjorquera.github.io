@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on </title>
+    <link>https://gaston.life/tags/hugo/</link>
+    <description>Recent content in hugo on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://gaston.life/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo: From Zero to One</title>
+      <link>https://gaston.life/writings/hugo/</link>
+      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/hugo/</guid>
+      <description>What is Hugo? Hugo is a CLI tool to build and maintain static HTML sites from source code. With Hugo you define the structure and style of the site once so that you can focus on the content. After you have an initial structure, style, and content, Hugo will be able to automatically include partials and layouts into pages, generate sitemaps, and build lists based completely on the content you write.</description>
+    </item>
+    
+    <item>
+      <title>Site Style</title>
+      <link>https://gaston.life/writings/site-style/</link>
+      <pubDate>Wed, 11 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/writings/site-style/</guid>
+      <description>Headings The following HTML &amp;lt;h1&amp;gt;—&amp;lt;h6&amp;gt; elements represent six levels of section headings. &amp;lt;h1&amp;gt; is the highest section level while &amp;lt;h6&amp;gt; is the lowest.
+H1 H2 H3 H4 H5 H6 Paragraph Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur?</description>
+    </item>
+    
+  </channel>
+</rss>

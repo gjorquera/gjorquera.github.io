@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hugo From Zero to One</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="description" content="A (non magical) quickstart guide to build a personal website from scratch using Hugo.
+" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <link rel="stylesheet" href="https://gaston.life/css/main.min.5e222a705cb5aa73a10e6da715c4376da111cdfcc311c23a9322e8edd9860506.css">
+    <meta itemprop="name" content="Hugo: From Zero to One">
+<meta itemprop="description" content="A (non magical) quickstart guide to build a personal website from scratch using Hugo.
+">
+<meta itemprop="datePublished" content="2019-12-14T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-03-22T19:38:23-07:00" />
+<meta itemprop="wordCount" content="1904">
+
+
+
+<meta itemprop="keywords" content="hugo,static-site," />
+
+    <meta property="og:title" content="Hugo: From Zero to One" />
+<meta property="og:description" content="A (non magical) quickstart guide to build a personal website from scratch using Hugo.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gaston.life/writings/hugo/" />
+<meta property="article:published_time" content="2019-12-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-22T19:38:23-07:00" />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo: From Zero to One"/>
+<meta name="twitter:description" content="A (non magical) quickstart guide to build a personal website from scratch using Hugo.
+"/>
+
+  </head>
+  <body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbar" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item is-tab " href="https://gaston.life/">Home</a>
+            <a class="navbar-item is-tab " href="https://gaston.life/books/">Books</a>
+            <a class="navbar-item is-tab is-active" href="https://gaston.life/writings/">Writings</a>
+            <a class="navbar-item is-tab " href="https://gaston.life/now/">Now</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="container section">
+      
+<article>
+  <header class="content">
+    <h1>Hugo: From Zero to One</h1>
+    <p>A (non magical) quickstart guide to build a personal website from scratch using Hugo.
+</p>
+    <small>
+  Reading time: 9 min(s)
+  · Date published: December 14, 2019
+</small>
+
+  </header>
+  
+  <aside class="content">
+    
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-hugo">What is Hugo?</a>
+      <ul>
+        <li><a href="#what-about-jekyll">What About Jekyll?</a></li>
+        <li><a href="#why-another-guide">Why Another Guide?</a></li>
+      </ul>
+    </li>
+    <li><a href="#walking-skeleton">Walking Skeleton</a>
+      <ul>
+        <li><a href="#bare-bones">Bare bones</a></li>
+        <li><a href="#scripts">Scripts</a></li>
+        <li><a href="#homepage">Homepage</a></li>
+        <li><a href="#deployment-strategy">Deployment Strategy</a></li>
+      </ul>
+    </li>
+    <li><a href="#main-content">Main Content</a>
+      <ul>
+        <li><a href="#single-pages">Single Pages</a></li>
+        <li><a href="#page-collections">Page Collections</a></li>
+        <li><a href="#not-found-page">Not Found Page</a></li>
+      </ul>
+    </li>
+    <li><a href="#next-steps">Next Steps</a></li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+  <main class="content">
+    <h2 id="what-is-hugo">What is Hugo?</h2>
+<p><a href="https://gohugo.io/">Hugo</a> is a CLI tool to build and maintain static HTML sites
+from source code. With Hugo you define the structure and style of the site once
+so that you can focus on the content. After you have an initial structure,
+style, and content, Hugo will be able to automatically include partials and
+layouts into pages, generate sitemaps, and build lists based completely on the
+content you write.</p>
+<p>Hugo builds the following static HTML files:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">├── articles
+│   ├── first
+│   │   └── index.html
+│   ├── index.html
+│   └── index.xml
+├── index.html
+├── index.xml
+├── now
+│   └── index.html
+└── sitemap.xml
+</code></pre></div><p>From the following source code:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">├── config.toml
+├── content
+│   ├── _index.md
+│   ├── articles
+│   │   ├── _index.md
+│   │   └── first.md
+│   └── now.md
+├── layouts
+│   ├── _default
+│   │   ├── baseof.html
+│   │   ├── list.html
+│   │   └── single.html
+│   └── index.html
+└── script
+    ├── bootstrap
+    └── server
+</code></pre></div><h3 id="what-about-jekyll">What About Jekyll?</h3>
+<p>I used <a href="https://jekyllrb.com/">Jekyll</a> for a few years but I moved to Hugo for the
+following reasons:</p>
+<ul>
+<li>Speed: Jekyll started taking several seconds to build my site which slowed my
+development workflow. With Hugo the refresh happens almost instantly.</li>
+<li>Organization: Jekyll was initially built for date based blog posts and my site
+is closer to a category based knowledge base. Hugo works out of the box for
+this organization style.</li>
+<li>Convenience: Having to install rbenv, Ruby, and Rubygems only to run Jekyll
+was getting very annoying. With Hugo this is enough: <code>brew install hugo</code>.</li>
+</ul>
+<p>Jekyll does provide more flexibility and the option to extend the backend engine
+but I&rsquo;ve found out that Hugo&rsquo;s defaults are enough.</p>
+<h3 id="why-another-guide">Why Another Guide?</h3>
+<p>When migrating my site from Jekyll to Hugo I found out that <a href="https://gohugo.io/getting-started/quick-start/">Hugo&rsquo;s
+quickstart</a> is too short and
+magical and the complete documentation is too generic.</p>
+<p>This guide explains how to build a real world sample personal site from scratch.</p>
+<h2 id="walking-skeleton">Walking Skeleton</h2>
+<p>The <a href="https://gaston.life/books/growing-object-oriented-software-guided-by-tests/">GOOS</a> book introduced the concept of a walking skeleton. The absolute minimum
+code that can be successfully deployed. In our case, this will be a production
+ready, deployed, and ugly &ldquo;Hello, World!&rdquo; site.</p>
+<h3 id="bare-bones">Bare bones</h3>
+<h4 id="install-hugo">Install Hugo</h4>
+<p>Follow <a href="https://gohugo.io/getting-started/installing">Hugo&rsquo;s quick install</a>
+instructions for your platform. I use macOS so I ran:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ brew install hugo
+$ hugo version
+Hugo Static Site Generator v0.61.0/extended darwin/amd64 BuildDate: unknown
+</code></pre></div><h4 id="new-site">New Site</h4>
+<p>Create the new, empty site. The site name doesn&rsquo;t have to follow any convention,
+it can be anything. In this guide I will use <code>my-personal-site</code>:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ hugo new site my-personal-site
+Congratulations! Your new Hugo site is created in /Users/gaston/Code/my-personal-site.
+
+Just a few more steps and you&#39;re ready to go:
+
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/ or
+   create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command.
+2. Perhaps you want to add some content. You can add single files
+   with &#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;.
+3. Start the built-in live server via &#34;hugo server&#34;.
+
+Visit https://gohugo.io/ for quickstart guide and full documentation.
+</code></pre></div><p>Don&rsquo;t download a theme and don&rsquo;t use <code>hugo new</code>. It&rsquo;s too magical.</p>
+<h4 id="initialize-git">Initialize Git</h4>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ cd my-personal-site
+$ git init
+$ git add .
+$ git commit -m &#39;Initial commit&#39;
+</code></pre></div><h3 id="scripts">Scripts</h3>
+<h4 id="installation">Installation</h4>
+<p>GitHub proposed using a set of <a href="https://github.com/github/scripts-to-rule-them-all">standardized
+scripts</a> to interact with a
+codebase. I&rsquo;ve found this useful so I&rsquo;ll do the same here. Additionally, I wrote
+<a href="https://github.com/gjorquera/script-helpers">helpers</a> to make writing these
+scripts easier, which requires you to ignore the following automatically
+generated files:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ echo &#34;.cache.*&#34; &gt;&gt; .gitignore
+$ echo &#34;.h&#34; &gt;&gt; .gitignore
+</code></pre></div><h4 id="bootstrap">Bootstrap</h4>
+<p>Write this <code>script/bootstrap</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#93a1a1;font-style:italic">#!/usr/bin/env bash
+</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#cb4b16">cd</span> <span style="color:#2aa198">&#34;</span><span style="color:#859900">$(</span>dirname <span style="color:#268bd2">$0</span><span style="color:#859900">)</span><span style="color:#2aa198">/..&#34;</span>
+[ -f <span style="color:#2aa198">&#34;.h&#34;</span> ] || curl -s -o <span style="color:#2aa198">&#34;.h&#34;</span> -L https://git.io/v14Zc; . <span style="color:#2aa198">&#34;.h&#34;</span>
+
+<span style="color:#cb4b16">set</span> -e
+
+title <span style="color:#2aa198">&#34;Checking dependencies...&#34;</span>
+
+ensure <span style="color:#2aa198">&#34;which hugo&#34;</span>
+</code></pre></div><h4 id="server">Server</h4>
+<p>Write this <code>script/server</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#93a1a1;font-style:italic">#!/usr/bin/env bash
+</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#cb4b16">cd</span> <span style="color:#2aa198">&#34;</span><span style="color:#859900">$(</span>dirname <span style="color:#268bd2">$0</span><span style="color:#859900">)</span><span style="color:#2aa198">/..&#34;</span>
+[ -f <span style="color:#2aa198">&#34;.h&#34;</span> ] || curl -s -o <span style="color:#2aa198">&#34;.h&#34;</span> -L https://git.io/v14Zc; . <span style="color:#2aa198">&#34;.h&#34;</span>
+
+<span style="color:#cb4b16">set</span> -e
+
+./script/bootstrap
+
+title <span style="color:#2aa198">&#34;Running local webserver...&#34;</span>
+
+hugo serve -D
+</code></pre></div><h4 id="local-development">Local Development</h4>
+<p>You can now launch a local webserver. It will show multiple warnings but you can
+ignore them for now:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ ./script/server
+
+Checking dependencies...
+
+which hugo... ✓ done
+
+Running local webserver...
+
+Building sites … WARN 2019/12/14 12:23:38 found no layout file for &#34;HTML&#34; for &#34;taxonomyTerm&#34;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2019/12/14 12:23:38 found no layout file for &#34;HTML&#34; for &#34;home&#34;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2019/12/14 12:23:38 found no layout file for &#34;HTML&#34; for &#34;taxonomyTerm&#34;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+
+                   | EN
++------------------+----+
+  Pages            |  3
+  Paginator pages  |  0
+  Non-page files   |  0
+  Static files     |  0
+  Processed images |  0
+  Aliases          |  0
+  Sitemaps         |  1
+  Cleaned          |  0
+
+Built in 8 ms
+Watching for changes in /Users/gaston/Code/my-personal-site/{archetypes,content,data,layouts,static}
+Watching for config changes in /Users/gaston/Code/my-personal-site/config.toml
+Environment: &#34;development&#34;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre></div><p>Open http://localhost:1313 to see your new empty site.</p>
+<h4 id="commit">Commit</h4>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ git add .
+$ git commit -m &#39;Add scripts to rule them all&#39;
+</code></pre></div><h3 id="homepage">Homepage</h3>
+<p>Hugo assigns a <a href="https://gohugo.io/content-management/types/">content type</a> to
+every page in your site. There are a few pre-defined content types and new
+content types can be defined based on the directory structure. The
+<a href="https://gohugo.io/templates/homepage/">homepage</a> is a special content type with
+its own layout different from all other single pages.</p>
+<h4 id="content">Content</h4>
+<p>Write this <code>content/_index.md</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: Hello, World!
+description: |
+  My personal site.
+---
+
+Welcome to my personal site.
+
+<span style="color:#d33682">## Contact
+</span><span style="color:#d33682"></span>
+You can contact me via e-mail but I don&#39;t have one yet.
+</code></pre></div><h4 id="baseof">Baseof</h4>
+<p>After saving the previous file, Hugo will rebuild the site but still nothing
+will show. This is because we have content but no layouts to render the content.</p>
+<p>The <code>baseof</code> layout is the base of all layouts, where the main HTML5 markup will
+live.</p>
+<p>Write this <code>layouts/_default/baseof.html</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#93a1a1;font-style:italic">&lt;!doctype html&gt;</span>
+&lt;<span style="color:#268bd2;font-weight:bold">html</span> <span style="color:#268bd2">lang</span>=<span style="color:#2aa198">&#34;en&#34;</span>&gt;
+  &lt;<span style="color:#268bd2;font-weight:bold">head</span>&gt;
+    &lt;<span style="color:#268bd2;font-weight:bold">meta</span> <span style="color:#268bd2">charset</span>=<span style="color:#2aa198">&#34;utf-8&#34;</span>&gt;
+    &lt;<span style="color:#268bd2;font-weight:bold">title</span>&gt;{{ .Title }}&lt;/<span style="color:#268bd2;font-weight:bold">title</span>&gt;
+  &lt;/<span style="color:#268bd2;font-weight:bold">head</span>&gt;
+  &lt;<span style="color:#268bd2;font-weight:bold">body</span>&gt;
+    {{ block &#34;main&#34; . }}{{ end }}
+  &lt;/<span style="color:#268bd2;font-weight:bold">body</span>&gt;
+&lt;/<span style="color:#268bd2;font-weight:bold">html</span>&gt;
+</code></pre></div><h4 id="layout">Layout</h4>
+<p>The <code>baseof</code> is the layout all pages, we still need the specific layout for the
+homepage.</p>
+<p>Write this <code>layouts/index.html</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ define &#34;main&#34; }}
+&lt;<span style="color:#268bd2;font-weight:bold">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#268bd2;font-weight:bold">h1</span>&gt;
+{{ .Content }}
+{{ end }}
+</code></pre></div><p>You can now refresh http://localhost:1313 and you should see the ugly &ldquo;Hello,
+World!&rdquo;.</p>
+<p>It is now safe to keep the local webserver running and the tab open because Hugo
+will rebuild and refresh everything anytime it detects a change.</p>
+<h4 id="commit-1">Commit</h4>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ git add .
+$ git commit -m &#39;Add hello world homepage and layout&#39;
+</code></pre></div><h3 id="deployment-strategy">Deployment Strategy</h3>
+<p>The last step of the walking skeleton is deploying to live. You can host
+personal sites in GitHub (called <a href="https://pages.github.com/">GitHub Pages</a>) but
+to do that the whole codebase has to be the static HTML site.</p>
+<p>To achieve this with Hugo, we will follow <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Hugo&rsquo;s
+guidance</a> and build
+the static HTML site into a new GitHub user pages repository.</p>
+<h4 id="config-file">Config File</h4>
+<p>Make sure the configuration file points to your GitHub user pages repository and
+has the write title. Update the <code>config.toml</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="display:block;width:100%;background-color:#d6d0bf"><span style="color:#268bd2">baseURL</span> = <span style="color:#2aa198">&#34;https://&lt;username&gt;.github.io/&#34;</span>
+</span><span style="color:#268bd2">languageCode</span> = <span style="color:#2aa198">&#34;en-us&#34;</span>
+<span style="display:block;width:100%;background-color:#d6d0bf"><span style="color:#268bd2">title</span> = <span style="color:#2aa198">&#34;My Personal Site&#34;</span>
+</span></code></pre></div><h4 id="production-codebase">Production Codebase</h4>
+<p>Create a new <code>&lt;username&gt;.github.io</code> repository in your GitHub account with a
+default README file.</p>
+<p>Clone the repository as a submodule into <code>public</code>:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ git submodule add -b master git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git public
+</code></pre></div><p>Write this <code>script/deploy</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#93a1a1;font-style:italic">#!/usr/bin/env bash
+</span><span style="color:#93a1a1;font-style:italic"></span><span style="color:#cb4b16">cd</span> <span style="color:#2aa198">&#34;</span><span style="color:#859900">$(</span>dirname <span style="color:#268bd2">$0</span><span style="color:#859900">)</span><span style="color:#2aa198">/..&#34;</span>
+[ -f <span style="color:#2aa198">&#34;.h&#34;</span> ] || curl -s -o <span style="color:#2aa198">&#34;.h&#34;</span> -L https://git.io/v14Zc; . <span style="color:#2aa198">&#34;.h&#34;</span>
+
+<span style="color:#cb4b16">set</span> -e
+
+./script/bootstrap
+
+<span style="color:#268bd2">DATE</span>=<span style="color:#2aa198">&#34;</span><span style="color:#859900">$(</span>date<span style="color:#859900">)</span><span style="color:#2aa198">&#34;</span>
+
+title <span style="color:#2aa198">&#34;Building site...&#34;</span>
+
+rm -rf public/*
+hugo
+<span style="color:#cb4b16">cd</span> public
+git add .
+git commit -m <span style="color:#2aa198">&#34;Site build </span><span style="color:#268bd2">$DATE</span><span style="color:#2aa198">&#34;</span>
+
+title <span style="color:#2aa198">&#34;Deploying site to GitHub...&#34;</span>
+
+git push origin master
+<span style="color:#cb4b16">cd</span> ..
+git add public
+git commit -m <span style="color:#2aa198">&#34;Site build </span><span style="color:#268bd2">$DATE</span><span style="color:#2aa198">&#34;</span>
+</code></pre></div><h4 id="commit-and-deploy">Commit and Deploy</h4>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ git add .
+$ git commit -m &#39;Add deploy script&#39;
+$ ./script/deploy
+</code></pre></div><p>Watch your site get built and pushed into your GitHub Pages repository.</p>
+<p>You can now go to <code>https://&lt;username&gt;.github.io</code> and see your brand new site.</p>
+<h2 id="main-content">Main Content</h2>
+<h3 id="single-pages">Single Pages</h3>
+<p>Single pages are pages without a collection or a page within a collection. For
+example, if you want to show one article, or one blog post, or a contact page,
+all of those are single pages.</p>
+<h4 id="nownownow">NowNowNow</h4>
+<p><a href="https://nownownow.com/">NowNowNow</a> is an initiative by Derek Sivers for sites
+with a <code>/now</code> page. Let&rsquo;s add ours.</p>
+<p>Write this <code>content/now.md</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: What I&#39;m Doing Right Now
+description: |
+  A nownownow page.
+---
+
+<span style="color:#d33682">_(This is a [now](http://nownownow.com/about) page.)_</span>
+
+<span style="color:#d33682">## Hugo
+</span><span style="color:#d33682"></span>
+Learning how to build a personal site with Hugo.
+</code></pre></div><h4 id="layout-1">Layout</h4>
+<p>Even though we have a homepage layout, we still don&rsquo;t have a layout for single
+pages.</p>
+<p>Write this <code>layouts/_default/single.html</code>:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ define &#34;main&#34; }}
+&lt;<span style="color:#268bd2;font-weight:bold">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#268bd2;font-weight:bold">h1</span>&gt;
+
+{{ .Content }}
+
+{{ end }}
+</code></pre></div><p>You can now visit http://localhost:1313/now.</p>
+<h4 id="menu">Menu</h4>
+<p>Now we need a way to click our way through the site, to go from the homepage to
+the now page.</p>
+<p>Update the <code>layouts/_default/baseof.html</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#93a1a1;font-style:italic">&lt;!doctype html&gt;</span>
+&lt;<span style="color:#268bd2;font-weight:bold">html</span> <span style="color:#268bd2">lang</span>=<span style="color:#2aa198">&#34;en&#34;</span>&gt;
+  &lt;<span style="color:#268bd2;font-weight:bold">head</span>&gt;
+    &lt;<span style="color:#268bd2;font-weight:bold">meta</span> <span style="color:#268bd2">charset</span>=<span style="color:#2aa198">&#34;utf-8&#34;</span>&gt;
+    &lt;<span style="color:#268bd2;font-weight:bold">title</span>&gt;{{ .Title }}&lt;/<span style="color:#268bd2;font-weight:bold">title</span>&gt;
+  &lt;/<span style="color:#268bd2;font-weight:bold">head</span>&gt;
+  &lt;<span style="color:#268bd2;font-weight:bold">body</span>&gt;
+<span style="display:block;width:100%;background-color:#d6d0bf">    &lt;<span style="color:#268bd2;font-weight:bold">nav</span>&gt;
+</span><span style="display:block;width:100%;background-color:#d6d0bf">      &lt;<span style="color:#268bd2;font-weight:bold">ul</span>&gt;
+</span><span style="display:block;width:100%;background-color:#d6d0bf">        &lt;<span style="color:#268bd2;font-weight:bold">li</span>&gt;&lt;<span style="color:#268bd2;font-weight:bold">a</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;navbar-item&#34;</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;{{ &#34;</span>/&#34; | <span style="color:#268bd2">absURL</span> }}&#34;&gt;Home&lt;/<span style="color:#268bd2;font-weight:bold">a</span>&gt;&lt;/<span style="color:#268bd2;font-weight:bold">li</span>&gt;
+</span><span style="display:block;width:100%;background-color:#d6d0bf">        &lt;<span style="color:#268bd2;font-weight:bold">li</span>&gt;&lt;<span style="color:#268bd2;font-weight:bold">a</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;navbar-item&#34;</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;{{ &#34;</span><span style="color:#268bd2">now</span>/&#34; | <span style="color:#268bd2">absURL</span> }}&#34;&gt;Now&lt;/<span style="color:#268bd2;font-weight:bold">a</span>&gt;&lt;/<span style="color:#268bd2;font-weight:bold">li</span>&gt;
+</span><span style="display:block;width:100%;background-color:#d6d0bf">      &lt;/<span style="color:#268bd2;font-weight:bold">ul</span>&gt;
+</span><span style="display:block;width:100%;background-color:#d6d0bf">    &lt;/<span style="color:#268bd2;font-weight:bold">nav</span>&gt;
+</span>
+    {{ block &#34;main&#34; . }}{{ end }}
+  &lt;/<span style="color:#268bd2;font-weight:bold">body</span>&gt;
+&lt;/<span style="color:#268bd2;font-weight:bold">html</span>&gt;
+</code></pre></div><h4 id="commit-and-deploy-1">Commit and Deploy</h4>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ git add .
+$ git commit -m &#39;Add a now single page and layout&#39;
+$ ./script/deploy
+</code></pre></div><h3 id="page-collections">Page Collections</h3>
+<p>You can define different types of <a href="https://gohugo.io/content-management/types/">content
+types</a> by following a directory
+structure convention inside of <code>content/</code>:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">content/
+├── type1/           &lt; type1 content type
+│   ├── _index.md    &lt; list page
+│   ├── content11.md &lt; single page of type type1
+│   └── content12.md &lt; single page of type type1
+├── type2/           &lt; type2 content type
+│   ├── _index.md    &lt; list page
+│   ├── content21.md &lt; single page of type type1
+└── _index.md        &lt; homepage
+</code></pre></div><h4 id="articles">Articles</h4>
+<p>Our site will have articles, which are grouped by categories and whose published
+date are not important.</p>
+<p>Write this <code>content/articles/_index.md</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: Articles
+description: &gt;
+  All the articles since the beginning of time.
+---
+</code></pre></div><p>And this <code>content/articles/first.md</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: First Article
+description: &gt;
+  The first article I&#39;ve ever written.
+category:
+<span style="color:#859900">-</span> meta
+---
+
+Introductory paragraph.
+
+<span style="color:#d33682">## Interesting Title
+</span><span style="color:#d33682"></span>
+Some more interesting stuff.
+</code></pre></div><h4 id="list-layout">List Layout</h4>
+<p>You can now access to http://localhost:1313/articles/first but
+http://localhost:1313/articles is blank because we don&rsquo;t have a list layout yet.</p>
+<p>Write this <code>layouts/_default/list.html</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ define &#34;main&#34; }}
+&lt;<span style="color:#268bd2;font-weight:bold">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#268bd2;font-weight:bold">h1</span>&gt;
+&lt;<span style="color:#268bd2;font-weight:bold">p</span>&gt;{{ .Description }}&lt;/<span style="color:#268bd2;font-weight:bold">p</span>&gt;
+
+{{ .Content }}
+
+&lt;<span style="color:#268bd2;font-weight:bold">ul</span>&gt;
+  {{ range .Pages }}
+  &lt;<span style="color:#268bd2;font-weight:bold">li</span>&gt;&lt;<span style="color:#268bd2;font-weight:bold">a</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#268bd2;font-weight:bold">a</span>&gt;&lt;/<span style="color:#268bd2;font-weight:bold">li</span>&gt;
+  {{ end }}
+&lt;/<span style="color:#268bd2;font-weight:bold">ul</span>&gt;
+
+{{ end }}
+</code></pre></div><h4 id="menu-1">Menu</h4>
+<p>We need to add the new articles section to the menu.</p>
+<p>Update the <code>layouts/_default/baseof.html</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#93a1a1;font-style:italic">&lt;!doctype html&gt;</span>
+&lt;<span style="color:#268bd2;font-weight:bold">html</span> <span style="color:#268bd2">lang</span>=<span style="color:#2aa198">&#34;en&#34;</span>&gt;
+  &lt;<span style="color:#268bd2;font-weight:bold">head</span>&gt;
+    &lt;<span style="color:#268bd2;font-weight:bold">meta</span> <span style="color:#268bd2">charset</span>=<span style="color:#2aa198">&#34;utf-8&#34;</span>&gt;
+    &lt;<span style="color:#268bd2;font-weight:bold">title</span>&gt;{{ .Title }}&lt;/<span style="color:#268bd2;font-weight:bold">title</span>&gt;
+  &lt;/<span style="color:#268bd2;font-weight:bold">head</span>&gt;
+  &lt;<span style="color:#268bd2;font-weight:bold">body</span>&gt;
+    &lt;<span style="color:#268bd2;font-weight:bold">nav</span>&gt;
+      &lt;<span style="color:#268bd2;font-weight:bold">ul</span>&gt;
+        &lt;<span style="color:#268bd2;font-weight:bold">li</span>&gt;&lt;<span style="color:#268bd2;font-weight:bold">a</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;navbar-item&#34;</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;{{ &#34;</span>/&#34; | <span style="color:#268bd2">absURL</span> }}&#34;&gt;Home&lt;/<span style="color:#268bd2;font-weight:bold">a</span>&gt;&lt;/<span style="color:#268bd2;font-weight:bold">li</span>&gt;
+<span style="display:block;width:100%;background-color:#d6d0bf">        &lt;<span style="color:#268bd2;font-weight:bold">li</span>&gt;&lt;<span style="color:#268bd2;font-weight:bold">a</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;navbar-item&#34;</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;{{ &#34;</span><span style="color:#268bd2">articles</span>/&#34; | <span style="color:#268bd2">absURL</span> }}&#34;&gt;Articles&lt;/<span style="color:#268bd2;font-weight:bold">a</span>&gt;&lt;/<span style="color:#268bd2;font-weight:bold">li</span>&gt;
+</span>        &lt;<span style="color:#268bd2;font-weight:bold">li</span>&gt;&lt;<span style="color:#268bd2;font-weight:bold">a</span> <span style="color:#268bd2">class</span>=<span style="color:#2aa198">&#34;navbar-item&#34;</span> <span style="color:#268bd2">href</span>=<span style="color:#2aa198">&#34;{{ &#34;</span><span style="color:#268bd2">now</span>/&#34; | <span style="color:#268bd2">absURL</span> }}&#34;&gt;Now&lt;/<span style="color:#268bd2;font-weight:bold">a</span>&gt;&lt;/<span style="color:#268bd2;font-weight:bold">li</span>&gt;
+      &lt;/<span style="color:#268bd2;font-weight:bold">ul</span>&gt;
+    &lt;/<span style="color:#268bd2;font-weight:bold">nav</span>&gt;
+
+    {{ block &#34;main&#34; . }}{{ end }}
+  &lt;/<span style="color:#268bd2;font-weight:bold">body</span>&gt;
+&lt;/<span style="color:#268bd2;font-weight:bold">html</span>&gt;
+</code></pre></div><h4 id="commit-and-deploy-2">Commit and Deploy</h4>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ git add .
+$ git commit -m &#39;Add an article and a list layout&#39;
+$ ./script/deploy
+</code></pre></div><h3 id="not-found-page">Not Found Page</h3>
+<p>GitHub Pages supports customizing the &ldquo;not found&rdquo; page.</p>
+<p>Write this <code>content/404.md</code> file:</p>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: Not Found
+description: |
+  Page not found.
+url: /404.html
+---
+
+The page you&#39;re looking for does not exist.
+</code></pre></div><h4 id="commit-and-deploy-3">Commit and Deploy</h4>
+<div class="highlight"><pre style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plain" data-lang="plain">$ git add .
+$ git commit -m &#39;Add a 404 page&#39;
+$ ./script/deploy
+</code></pre></div><h2 id="next-steps">Next Steps</h2>
+<p>We now have a fully functional site where you can:</p>
+<ul>
+<li>Add single pages.</li>
+<li>Add new articles.</li>
+</ul>
+<p>But Hugo has many additional features. I encourage you to dive deep into the
+<a href="https://gohugo.io/documentation/">official documentation</a>.</p>
+
+  </main>
+  <footer class="content">
+    
+    
+    <h1>See Also</h1>
+    <ul>
+      
+      <li><a href="/writings/site-style/">Site Style</a></li>
+      
+    </ul>
+    
+    <p><small>Last updated on March 22, 2020.</small></p>
+  </footer>
+</article>
+
+    </section>
+    
+    <script src="https://gaston.life/js/main.min.384c35de8a53c9a958f15661fe17b4bc657a15d887562ee0b6f56a3b10d91448.js" type = "text/javascript"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </body>
+</html>

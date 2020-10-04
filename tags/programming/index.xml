@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on </title>
+    <link>https://gaston.life/tags/programming/</link>
+    <description>Recent content in programming on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 09 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://gaston.life/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clean Coder</title>
+      <link>https://gaston.life/books/clean-coder/</link>
+      <pubDate>Sat, 09 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/books/clean-coder/</guid>
+      <description>Professionalism is all about taking responsibility. — Robert Martin
+ Don&amp;rsquo;t take pride or honor in something that you won&amp;rsquo;t be held accountable for.
+ Software is too complex to create without bugs. Unfortunately that doesn&amp;rsquo;t let you off the hook. The human body is too complex to understand in it&amp;rsquo;s entirety, but doctors still take an oath to do no harm. — Robert Martin
+ You will create bugs, you will make errors.</description>
+    </item>
+    
+    <item>
+      <title>Effective Java</title>
+      <link>https://gaston.life/books/effective-java/</link>
+      <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/books/effective-java/</guid>
+      <description>Clarity and simplicity are of paramount importance. The user of a module should never be surprised by its behavior. Modules should be as small as possible but no smaller. Code should be reused rather than copied. The dependencies between modules should be kept to a minimum. — Joshua Bloch
+ Creating and Destroying Objects Consider static factory methods (not Factory Method pattern) for object instantiation. You can cache instances to control the number of instances, and return nonpublic subtypes exposing one public API hiding the different implementations.</description>
+    </item>
+    
+    <item>
+      <title>Effective Programming</title>
+      <link>https://gaston.life/books/effective-programming/</link>
+      <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/books/effective-programming/</guid>
+      <description>Being a Programmer Don&amp;rsquo;t become a programmer only because someone tells you to. Become a programmer because you want to solve problems, you want to write your own rules, and you enjoy doing it.
+The most important skill for a programmer is the ability to effectively communicate ideas. This leads to code that communicates intention. The only work that&amp;rsquo;s reusable is the one that you understand what it communicates.
+Always keep on studying and practicing on how to write.</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t Make Me Think</title>
+      <link>https://gaston.life/books/dont-make-me-think/</link>
+      <pubDate>Fri, 21 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/books/dont-make-me-think/</guid>
+      <description>Before you start building your web site, have some users try your competitors web sites and take notes on the problems they have. Consider this pain points when designing and building your own web site.
+Don&amp;rsquo;t make your users think. Strive to make web pages self-evident or, at the very least, self-explanatory. Every time a user stops to consider if they&amp;rsquo;re on the right path, it adds to their cognitive workload and distracts them from their actual task.</description>
+    </item>
+    
+    <item>
+      <title>Growing Object Oriented Software, Guided by Tests</title>
+      <link>https://gaston.life/books/growing-object-oriented-software-guided-by-tests/</link>
+      <pubDate>Tue, 30 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://gaston.life/books/growing-object-oriented-software-guided-by-tests/</guid>
+      <description>Unless performance is a requirement, optimize for readability. Code is read far more than it&amp;rsquo;s written.
+Team productivity is mostly improved by a readable codebase.
+External quality measures the level on which the system meets its customers and users needs. Internal quality measures the level on which the system meets its developers and administrator needs.
+When developing always consider the external quality trade-offs as well as internal quality trade-offs. Never forget about the internal quality.</description>
+    </item>
+    
+  </channel>
+</rss>
